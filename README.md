@@ -12,16 +12,25 @@ Compile
   export JANA_PLUGIN_PATH=${PWD}
 ```
 
-  ./writer  # creates a simple ROOT tree with 10^6 double entries
+Create input tree
+-----------------
 
+```
+  ./writer  # a simple ROOT tree with 10^6 double entries
+```
 
-  #  
-  # All of these create histograms.root with a single histogram 'hv', 
-  # but a TTree input loop is done in a very different way;
-  #
+Read the tree
+-------------
 
+```  
+  All of these create histograms.root with a single histogram 'hv', 
+  but a TTree input loop is done in a very different way;
+```
+
+```
   # Standalone loop in ROOT environment; several options available;
   ./reader1 # straightforward single-threaded loop
+```
 
   ./reader2 # 4 threads using TTreeProcessorMT interface
 
