@@ -1,11 +1,16 @@
-#
-#  A simple suite exploring ROOT input option(s) for JANA;
-#
 
+A simple suite exploring ROOT input option(s) for JANA
+======================================================
+
+Compile
+-------
+
+```
   mkdir build && cd build
   cmake -DJANA=<jana-installation-directory> -Wno-dev ..
   make -j4
   export JANA_PLUGIN_PATH=${PWD}
+```
 
   ./writer  # creates a simple ROOT tree with 10^6 double entries
 
