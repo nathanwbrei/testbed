@@ -24,19 +24,25 @@ Read the tree
 
 ```  
   All of these create histograms.root with a single histogram 'hv', 
-  but a TTree input loop is done in a very different way;
+  but a TTree input loop is done in a very different way
+
+  reader* executables are standalone loops in ROOT environment
+
+  libjreader is a JANA plugin
 ```
 
 ```
-  # Standalone loop in ROOT environment; several options available;
   ./reader1 # straightforward single-threaded loop
 ```
-
+```
   ./reader2 # 4 threads using TTreeProcessorMT interface
-
+```
+```
   ./reader3 # 4 threads using std::thread interface manually
-
+```
+```
   ./reader4 # 4 threads using RDataFrame interface
+```
 
   # JANA loop; make sure 'jana' is in the PATH, of course; either of the 
   # two commands below should work; the first one is "naive"; the second 
