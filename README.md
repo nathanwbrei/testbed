@@ -44,13 +44,18 @@ Read the tree
   ./reader4 # 4 threads using RDataFrame interface
 ```
 
+```
   # JANA loop; make sure 'jana' is in the PATH, of course; either of the 
   # two commands below should work; the first one is "naive"; the second 
   # one uses asynchronous processor and JANA Get() interface;
   jana -Pplugins=libjreader -Pnthreads=4 /dev/zero
   jana -Pplugins=libjreader -Pnthreads=4 -Pwith-processor=yes /dev/zero
+```
 
+Plot the output histogram
+-------------------------
 
-  # plot the same 'hv' histogram after any of the 'reader*' passes above
+```
+  # Displays the 'hv' histogram created after any of the 'reader*' passes above
   root -l ../plotter.C
-
+```
