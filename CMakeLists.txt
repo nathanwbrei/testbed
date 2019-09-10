@@ -34,6 +34,8 @@ target_link_libraries(reader4 ${ROOT_LIBRARIES} -lROOTDataFrame)
 
 # -----------------------
 
+set(JANA /home/nbrei/src/jana2/Linux_RHEL7-x86_64-gcc4.8.5)
+
 set(INCLUDE_DIRECTORIES
 ${CMAKE_SOURCE_DIR}
 

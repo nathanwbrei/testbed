@@ -10,7 +10,7 @@ thread_local TH1D  *JEventSource_jreader::mHist = 0;
 
 void JEventSource_jreader::Open(void)
 {
-  SetNumEventsToGetAtOnce(100, 100);
+  //SetNumEventsToGetAtOnce(100, 100);
 
   mFout = new TFile("histograms.root", "RECREATE");
 
