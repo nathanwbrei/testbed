@@ -2,9 +2,9 @@
 A simple suite exploring ROOT input option(s) for JANA
 ======================================================
 
-A basic ROOT tree is imported in several single-threaded
-and multithreaded ways. An output 1D histogram is created 
-and gets written into the output ROOT file. 
+  A basic ROOT tree is imported in several single-threaded
+  and multithreaded ways. An output 1D histogram is created 
+  and gets written into the output ROOT file. 
 
 Compile
 -------

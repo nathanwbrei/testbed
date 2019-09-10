@@ -4,6 +4,8 @@
 #include "JEventProcessor_jreader.h"
 #include "JEventSource_jreader.h"
 
+bool WithProcessor = false;
+
 extern "C"{
 void InitPlugin(JApplication *app) {
 
@@ -13,12 +15,10 @@ void InitPlugin(JApplication *app) {
   app->Add( new JEventSourceGeneratorT<JEventSource_jreader>() );
   
   JParameterManager *pm = app->GetJParameterManager();
-  if (pm->Exists("with-processor")) {
-    WithProcessor = true;
+  if (pm->Exists("with-processor")) WithProcessor = true;
 
-    // Add event processor in this case;
-    app->Add( new JEventProcessor_jreader() );  
-  } //if
+  // Add event processor anyway, since it is managing the output as well;
+  app->Add( new JEventProcessor_jreader() ); 
 }
 } // "C"
 
