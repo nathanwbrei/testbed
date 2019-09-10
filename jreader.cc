@@ -1,4 +1,6 @@
 
+#include <TROOT.h>
+
 #include <JANA/JEventSourceGeneratorT.h>
 
 #include "JEventProcessor_jreader.h"
@@ -8,6 +10,7 @@ bool WithProcessor = false;
 
 extern "C"{
 void InitPlugin(JApplication *app) {
+  ROOT::EnableThreadSafety();
 
   InitJANAPlugin(app);
 	
