@@ -48,8 +48,9 @@ SET(JREADER_LIB jreader)
 set( JRSOURCES 
 jreader.cc
 JEventSource_jreader.cc
+JEventProcessor_jreader.cc
 )
 
-ADD_LIBRARY( ${JREADER_LIB} SHARED ${JRSOURCES} JEventProcessor_jreader.h JEventSource_jreader.h)
+ADD_LIBRARY( ${JREADER_LIB} SHARED ${JRSOURCES} )
 
 TARGET_LINK_LIBRARIES(${JREADER_LIB} ${JANA}/lib/libJANA.a ${ROOT_LIBRARIES})
