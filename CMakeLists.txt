@@ -49,7 +49,7 @@ set( JRSOURCES
 jreader.cc
 JEventSource_jreader.cc
 JEventProcessor_jreader.cc
-)
+        JSharedRootFile.h)
 
 ADD_LIBRARY( ${JREADER_LIB} SHARED ${JRSOURCES} )
 
